@@ -1,0 +1,15 @@
+<% layout('layouts/boilerplate') %>
+
+<div class="containet d-flex justify-content-evenly">
+  <div class="card my-3" style="width: 350px">
+    <div class="card-body">
+      <h5 class="card-title"><%=note.note%></h5>
+      <div class="d-flex justify-content-evenly mt-3">
+        <a href="/notes/<%=note._id%>/edit" class="btn btn-primary">Edit</a>
+        <form action="/notes/<%=note._id%>?_method=DELETE" method="POST">
+          <button type="submit" class="btn btn-danger">Delete</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
